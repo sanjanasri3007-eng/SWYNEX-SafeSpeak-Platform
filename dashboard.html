@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SafeSpeak Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+🛡 SafeSpeak
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="report.html">Report</a>
+
+<a href="track.html">Track</a>
+
+<a href="dashboard.html">Dashboard</a>
+
+</nav>
+
+<button class="exit-btn" onclick="quickExit()">
+Quick Exit
+</button>
+
+</header>
+
+<section class="report-page">
+
+<h1>Dashboard</h1>
+
+<div class="cards">
+
+<div class="card">
+<h2>Total Reports</h2>
+<h1 id="totalReports">1</h1>
+</div>
+
+<div class="card">
+<h2>Latest Case ID</h2>
+<h1 id="latestCase">Loading...</h1>
+</div>
+
+<div class="card">
+<h2>Status</h2>
+<h1>Under Review</h1>
+</div>
+
+<div class="card">
+<h2>Report Category</h2>
+<p id="reportCategory"></p>
+</div>
+
+<div class="card">
+<h2>Incident Date</h2>
+<p id="incidentDate"></p>
+</div>
+
+<div class="card">
+<h2>Location</h2>
+<p id="incidentLocation"></p>
+</div>
+
+</div>
+
+<br>
+
+<a href="report.html">
+<button class="btn">Submit Another Report</button>
+</a>
+
+</section>
+
+<script src="script.js"></script>
+
+<script>
+
+document.getElementById("latestCase").innerHTML =
+localStorage.getItem("caseID") || "No Report";
+
+document.getElementById("reportCategory").innerHTML =
+localStorage.getItem("category") || "-";
+
+document.getElementById("incidentDate").innerHTML =
+localStorage.getItem("date") || "-";
+
+document.getElementById("incidentLocation").innerHTML =
+localStorage.getItem("location") || "-";
+
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Review Report</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+🛡 SafeSpeak
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="report.html">Report</a>
+
+<a href="track.html">Track</a>
+
+<a href="dashboard.html">Dashboard</a>
+
+</nav>
+
+<button class="exit-btn" onclick="quickExit()">
+Quick Exit
+</button>
+
+</header>
+
+<section class="report-page">
+<div class="progress">
+
+<span class="done">✔ Report</span>
+
+<span class="current">● Review</span>
+
+<span>○ Evidence</span>
+
+<span>○ Complaint</span>
+
+<span>○ Success</span>
+
+</div>    
+
+<h1>Review Your Report</h1>
+
+<p>Please review your information before generating your complaint.</p>
+
+<div class="notice">
+
+<h3>Report Summary</h3>
+
+<p>
+Incident Category:
+<strong id="reviewCategory"></strong>
+</p>
+
+<p>
+Date:
+<strong id="reviewDate"></strong>
+</p>
+
+<p>
+Location:
+<strong id="reviewLocation"></strong>
+</p>
+
+<p>Description:</p>
+
+<div class="summary-box" id="reviewDescription"></div>
+
+</div>
+
+<br>
+
+<a href="evidence.html">
+<button class="btn">
+Continue to Evidence
+</button>
+</a>
+
+</section>
+
+<script>
+
+document.getElementById("reviewCategory").innerHTML =
+localStorage.getItem("category") || "Not Provided";
+
+document.getElementById("reviewDate").innerHTML =
+localStorage.getItem("date") || "Not Provided";
+
+document.getElementById("reviewLocation").innerHTML =
+localStorage.getItem("location") || "Not Provided";
+
+document.getElementById("reviewDescription").innerHTML =
+localStorage.getItem("description") || "No Description";
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Track Report</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+🛡 SafeSpeak
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="report.html">Report</a>
+
+<a href="track.html">Track</a>
+
+<a href="dashboard.html">Dashboard</a>
+
+</nav>
+
+<button class="exit-btn" onclick="quickExit()">
+Quick Exit
+</button>
+
+</header>
+
+<section class="report-page">
+
+<h1>Track Your Complaint</h1>
+
+<p>Enter your Case ID to check the status.</p>
+
+<input
+type="text"
+id="caseInput"
+placeholder="Enter Case ID">
+
+<br><br>
+
+<button class="btn" onclick="trackReport()">
+Track Report
+</button>
+
+<br><br>
+
+<div id="statusBox" class="summary-box" style="display:none;">
+
+<h3>Complaint Status</h3>
+
+<p id="statusText"></p>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

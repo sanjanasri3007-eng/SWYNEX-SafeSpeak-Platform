@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Report</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+🛡 SafeSpeak
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="report.html">Report</a>
+
+<a href="track.html">Track</a>
+
+<a href="dashboard.html">Dashboard</a>
+
+</nav>
+
+<button class="exit-btn" onclick="quickExit()">
+Quick Exit
+</button>
+
+</header>
+
+<section class="report-page">
+
+    <h1>Anonymous Incident Report</h1>
+
+    <p>
+        Your identity will remain private.<br>
+        Please provide as much information as you are comfortable sharing.
+    </p>
+
+    <!-- Removed action="review.html" -->
+    <form id="reportForm">
+
+        <label>Incident Category</label>
+
+        <select id="category">
+            <option>Sexual Harassment</option>
+            <option>Workplace Harassment</option>
+            <option>Cyberbullying</option>
+            <option>Stalking</option>
+            <option>Domestic Abuse</option>
+            <option>School Bullying</option>
+            <option>Other</option>
+        </select>
+
+        <br><br>
+
+        <label>Date of Incident</label><br>
+
+        <input type="date" id="date">
+
+        <br><br>
+
+        <label>Location</label><br>
+
+        <input
+            type="text"
+            id="location"
+            placeholder="Enter location">
+
+        <br><br>
+
+        <label>Describe What Happened</label><br>
+
+        <textarea
+            id="description"
+            rows="8"
+            placeholder="Write your experience..."></textarea>
+
+        <br><br>
+
+        <button
+            type="button"
+            class="btn"
+            onclick="startListening()">
+            🎤 Start Voice Recording
+        </button>
+
+        <br><br>
+
+        <button
+            type="button"
+            class="btn"
+            onclick="saveReport()">
+            Continue
+        </button>
+
+    </form>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
